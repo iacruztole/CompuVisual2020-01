@@ -1,5 +1,10 @@
+import processing.video.*;
+Movie mov;
+
+PImage[] images = new PImage[3];
 // the image to asciify
 PImage img;
+int index = 0;
  
 // sampling resolution: colors will be sampled every n pixels 
 // to determine which character to display
@@ -9,11 +14,18 @@ int resolution = 5;
 char[] ascii;
  
 void setup() {
-  img = loadImage("hitagi.jpg");
+  images[0] = loadImage("asuka.jpg");
+  images[0].resize(0, 700);
+  images[1] = loadImage("hitagi.jpg");
+  images[1].resize(0, 700);
+  mov = new Movie(this, "train.mp4");
+  images[2] = mov;
+  
+  
+  //img = loadImage("hitagi.jpg");
+  
+  
   size(1000, 700);
-  img.resize(0, 700);
-  background(255);
-  fill(0);
   noStroke();
  
   // build up a character array that corresponds to brightness values
@@ -28,10 +40,13 @@ void setup() {
   PFont mono = createFont("Courier", resolution+2);
   textFont(mono);
  
-  asciify();
+  asciify(images[0]);
 }
  
-void asciify() {
+void asciify(PImage img) {
+  
+  background(255);
+  fill(0);
   // since the text is just black and white, converting the image
   // to grayscale seems a little more accurate when calculating brightness
   img.filter(GRAY);
@@ -45,4 +60,37 @@ void asciify() {
       text(ascii[int(brightness(pixel))], x, y);
     }
   }
+}
+
+
+void movieEvent(Movie m) {
+  m.read();
+  
+}
+
+void draw(){
+  if(index == 2)
+  {
+    mov.filter(GRAY);
+    asciify(mov);
+  }
+}
+
+void keyPressed() {
+  if(keyCode==LEFT) {
+    index = (index+3-1)%3;
+  }    
+  else if (keyCode==RIGHT)
+  {
+    index = (index+1)%3;
+  }
+  
+  switch (index) {
+    case 2:
+      mov.loop();
+      break;
+    default:
+      mov.stop();
+      asciify(images[index]);
+    }
 }
