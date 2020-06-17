@@ -65,6 +65,10 @@ for pixel in list(img.getdata()):
 
 displayGrayScaledImage(luminosityOfPixels)
 
+# histograms representative of each approach to gray scale. 
+# the left values indicate more darkness, while the right 
+# ones more clarity -- how stereotypical.
+
 figure, axes = plt.subplots(3)
 axes[0].bar(list(range(256)), histograms[0])
 axes[0].set_title("RGB Average")
