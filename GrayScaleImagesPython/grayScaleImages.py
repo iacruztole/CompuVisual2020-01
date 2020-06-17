@@ -1,7 +1,6 @@
 # grayscale conversion experiments
 
 from PIL import Image
-
 import matplotlib.pyplot as plt
 
 img = Image.open("Dalai_Lama.jpg")
