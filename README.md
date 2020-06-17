@@ -22,7 +22,7 @@ Para esta parte se usaron las nociones matemáticas de lo que representa convert
 Al igual que por software, la metodología es la misma, una multiplicación de los valores de los pixeles aledaños y del propio pixel en cuestión, pero para esta parte se usó OPENGL. La idea, es pasarle al script la imágen cargada en un shape, se le pasa el arreglo de valores del Kernel a usar (en este caso se pasa como un arreglo y no una matriz, pero al final los valores que se multiplican y suman son exactamente los mismos y aplican a las posiciones difinidas por el kernel). Dentro del script se crean los objetos de cada pixel, primero se obtienen las cóordenadas de cada pixel, luego se leen dentro de la imagen, luego se multiplican con los del arreglo del kernel y se suman en total (se dividen por la normal si se necesita una) y se asigna esta transformación como el nuevo pixel actual. Todo se hace dentro del script de OPENGL, lo cual significa que se hace dentro del motor gráfico del computador, ya sea una tarjeta gráfica integrada o externa.
 ### Conversión de imágenes y video a ASCII
 La idea de la conversión a ascii es convertir la imágen o frame de video en escala de grises, obtener un promedio de algunos pixeles cercanos y asignar un símbolo en ASCII que tenga más o menos esa luminosidad, por lo que se crea un arreglo de caracteres de menor a mayor luminosidad y dependiendo de esta se van asignando caracteres por segmentos de imágen o frame. Al final, usando la resolución se decide de qué tamaño son los caracteres y de qué tamaño será el segmento sobre el que se aplica cada uno.
-
+[![N|Solid](https://github.com/iacruztole/CompuVisual2020-01/blob/master/Ascii/ascii.gif)]
 
 ### Conversion a escala de grises de imagenes y videos 
 
