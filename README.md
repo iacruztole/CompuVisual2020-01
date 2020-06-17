@@ -31,10 +31,14 @@ En este metodo se promediaron los valores de color de cada pixel de la imagen. E
 
     Ejemplo:
 
+<center>
+
 ![image ](./img/rgb.png)
 
 - **Método ponderado o método de luminosidad:** Dado que el rojo es el que tiene mas longitud de onda de los tres colores y el verde no solo es el color que tiene menor longitud de onda y da un efecto mas relajante a la vista. Se debe disminuir la contribucion del color rojo y aumentar la contribucion del color verde para conseguir una conversion a escala de grises apropiada.  Tenemos entonces:   Escala de grises = ((0.3 * R) + (0.59 * G) + (0.11 * B)).
 
     Ejemplo:
-    
+
+<center>
+
 ![image ](./img/Luma.png)
