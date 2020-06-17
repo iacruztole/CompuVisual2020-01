@@ -8,7 +8,7 @@
 ### Tecnologías:
 [![N|Solid](https://upload.wikimedia.org/wikipedia/commons/5/59/Processing_Logo_Clipped.svg)](https://processing.org/)
 [![N|Solid](https://www.opengl.org/img/opengl_logo.jpg)](https://www.opengl.org/)
-[![N|Solid](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png)](https://www.python.org/)
+[![N|Solid](https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg)](https://www.python.org/)
 
 El procesamiento de imagenes es el uso del computador para la aplicación de algoritmos sobre imágenes digitales, en donde los datos son los pixeles que la representan. Dadas las dimensiones de las imágenes digitales el procesamiento generalmente se pueden hacer en paralelo, lo cual se logra de forma muy eficaz por medio de tarjetas de video.
 ## El repositorio tiene las siguientes partes:
