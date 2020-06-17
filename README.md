@@ -30,9 +30,11 @@ La idea de la conversión a ascii es convertir la imágen o frame de video en es
 En este metodo se promediaron los valores de color de cada pixel de la imagen. Escala de grises = (R + G + B / 3).
 
     Ejemplo:
+
 ![image ](./img/rgb.png)
 
 - **Método ponderado o método de luminosidad:** Dado que el rojo es el que tiene mas longitud de onda de los tres colores y el verde no solo es el color que tiene menor longitud de onda y da un efecto mas relajante a la vista. Se debe disminuir la contribucion del color rojo y aumentar la contribucion del color verde para conseguir una conversion a escala de grises apropiada.  Tenemos entonces:   Escala de grises = ((0.3 * R) + (0.59 * G) + (0.11 * B)).
 
     Ejemplo:
+    
 ![image ](./img/Luma.png)
