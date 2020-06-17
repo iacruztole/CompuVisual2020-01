@@ -1,4 +1,4 @@
-# Procesamiento de Imagenes
+# Procesamiento de Imágenes CON PROCESSING Y PYTHON WOOO!!!
 
 ### Integrantes:
 - Iván Cruz 
