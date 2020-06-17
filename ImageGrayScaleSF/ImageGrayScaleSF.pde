@@ -38,8 +38,10 @@ void movieEvent(Movie myMovie3) {
     grayToScaleVid(2);
   }
   if (key == 'e'){
-    grayToScaleVid(2);
     brighnessThresholdVid();
+  }
+  if (key == 'f'){
+    grayToScaleVid(3);
   }
 }
 
@@ -82,6 +84,9 @@ void grayToScaleImg(int opcion){
     if (opcion == 2){
       imagen2.pixels[pixel] =color(0.2989*red(c)+ 0.5870*green(c)+ 0.1140*blue(c));
     }
+    if (opcion == 3){
+      imagen2.pixels[pixel] =color(255 - red(c), 255 - green(c), 255 - blue(c));
+    }
   }
   imagen2.updatePixels();
 }
@@ -96,6 +101,9 @@ void grayToScaleVid(int opcion){
     }
     if (opcion == 2){
       imagen4.pixels[pixel] =color(0.2989*red(c)+ 0.5870*green(c)+ 0.1140*blue(c));
+    }
+    if (opcion == 3){
+      imagen4.pixels[pixel] =color(255 - red(c), 255 - green(c), 255 - blue(c));
     }
   }
   imagen4.updatePixels();
@@ -137,13 +145,20 @@ void brighnessThresholdVid(){
 
 
 void keyPressed() {
-  if (key == 'c')
+  if (key == 'c'){
     grayToScaleImg(1);
     grayToScaleVid(1);
-  if (key == 'd')
+  }
+  if (key == 'd'){
     grayToScaleImg(2);
     grayToScaleVid(2);
-  if (key == 'e')
+  }
+  if (key == 'e'){
     brighnessThresholdImg();
     brighnessThresholdVid();
+  }
+  if (key == 'f'){
+    grayToScaleImg(3);
+    grayToScaleVid(3);
+  }
 }
