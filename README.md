@@ -37,7 +37,7 @@ En este metodo se promediaron los valores de color de cada pixel de la imagen. E
 
 <center>
 
-[![N|Solid](https://github.com/iacruztole/CompuVisual2020-01/blob/master/imagenes/rgb.PNG)]
+[![N|Solid](https://github.com/iacruztole/CompuVisual2020-01/blob/master/imagenes/rgb1.PNG)]
 
 
 
