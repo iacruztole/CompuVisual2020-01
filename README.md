@@ -45,6 +45,33 @@ En este metodo se promediaron los valores de color de cada pixel de la imagen. E
 
     Ejemplo:
 
-<center>
 
 [![N|Solid](https://github.com/iacruztole/CompuVisual2020-01/blob/master/imagenes/Luma.PNG)]
+
+
+
+- **Método HSV:**
+
+[![N|Solid](https://github.com/iacruztole/CompuVisual2020-01/blob/master/imagenes/hsv.PNG)]
+
+
+- **Método HSL:**
+
+[![N|Solid](https://github.com/iacruztole/CompuVisual2020-01/blob/master/imagenes/hsl.PNG)]
+
+
+- **Método Adobe:**
+
+[![N|Solid](https://github.com/iacruztole/CompuVisual2020-01/blob/master/imagenes/adobe.PNG)]
+
+
+- **Método Color complementario:**
+
+[![N|Solid](https://github.com/iacruztole/CompuVisual2020-01/blob/master/imagenes/complementary.PNG)]
+
+
+- **Método Umbral de brillo:**
+
+[![N|Solid](https://github.com/iacruztole/CompuVisual2020-01/blob/master/imagenes/birghnessth.PNG)]
+
+
