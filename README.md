@@ -46,7 +46,7 @@ En este metodo se promediaron los valores de color de cada pixel de la imagen. E
     Ejemplo:
 
 
-[![N|Solid](https://github.com/iacruztole/CompuVisual2020-01/blob/master/imagenes/Luma.PNG)]
+[![N|Solid](https://github.com/iacruztole/CompuVisual2020-01/blob/master/imagenes/Luma1.PNG)]
 
 
 
