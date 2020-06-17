@@ -31,18 +31,38 @@ void setup(){
 
 void movieEvent(Movie myMovie3) {
   myMovie3.read();
-  if (key == 'c'){
-    grayToScaleVid(1);
-  }
-  if (key == 'd'){
-    grayToScaleVid(2);
-  }
-  if (key == 'e'){
-    brighnessThresholdVid();
-  }
-  if (key == 'f'){
-    grayToScaleVid(3);
-  }
+  
+  switch (key) { 
+      case '1':   
+        grayToScaleVid(1);
+        break;
+      case '2':   
+        grayToScaleVid(2);
+        break;
+      case '3':
+        grayToScaleVid(3);
+        
+        break;
+      case '4':
+        grayToScaleVid(4);
+        break;
+      case '5':
+        grayToScaleVid(5);
+        break;
+      case '6':
+        grayToScaleVid(6);
+        break;
+      case '7':
+        grayToScaleVid(7);
+        break;
+      case '8':
+        grayToScaleVid(8);
+        break;
+      case '9':
+        brighnessThresholdVid();
+        break;
+    }
+   
 }
 
 void draw(){
@@ -78,15 +98,39 @@ void grayToScaleImg(int opcion){
   imagen1.loadPixels();
   for (int pixel = 0; pixel < imagen1.width * imagen2.height; pixel++){
     color c = imagen1.pixels[pixel];
-    if (opcion == 1){
-      imagen2.pixels[pixel] =color((red(c)+green(c)+blue(c))/3);
+    
+    switch (opcion) { 
+      case 1:   
+        imagen2.pixels[pixel] =color((red(c)+green(c)+blue(c))/3);
+        break;
+      case 2:   
+        imagen2.pixels[pixel] =color(0.2989*red(c)+ 0.5870*green(c)+ 0.1140*blue(c));
+        break;
+      case 3:
+        float[] values1 = { red(c),green(c),blue(c)};
+        imagen2.pixels[pixel] =color (max(values1));
+        break;
+      case 4:
+        float[] values2 = { red(c),green(c),blue(c)};
+        imagen2.pixels[pixel] =color ((max(values2) + min(values2))/2);
+        break;
+      case 5:
+        imagen2.pixels[pixel] =color(0.2989*red(c)+ 0.701*green(c)+ 0.087*blue(c));
+        break;
+      case 6:
+        imagen2.pixels[pixel] =color(0.2126*red(c)+ 0.7152*green(c)+ 0.0722*blue(c));
+        break;
+      case 7:
+        imagen2.pixels[pixel] =color(0.2627*red(c)+ 0.6780*green(c)+ 0.0593*blue(c));
+        break;
+      case 8:
+        imagen2.pixels[pixel] =color(255 - red(c), 255 - green(c), 255 - blue(c));
+        break;
     }
-    if (opcion == 2){
-      imagen2.pixels[pixel] =color(0.2989*red(c)+ 0.5870*green(c)+ 0.1140*blue(c));
-    }
-    if (opcion == 3){
-      imagen2.pixels[pixel] =color(255 - red(c), 255 - green(c), 255 - blue(c));
-    }
+    
+    
+    
+    
   }
   imagen2.updatePixels();
 }
@@ -96,14 +140,33 @@ void grayToScaleVid(int opcion){
   myMovie3.loadPixels();
   for (int pixel = 0; pixel < myMovie3.width * myMovie3.height; pixel++){
     color c = myMovie3.pixels[pixel];
-    if (opcion == 1){
-      imagen4.pixels[pixel] =color((red(c)+green(c)+blue(c))/3);
-    }
-    if (opcion == 2){
-      imagen4.pixels[pixel] =color(0.2989*red(c)+ 0.5870*green(c)+ 0.1140*blue(c));
-    }
-    if (opcion == 3){
-      imagen4.pixels[pixel] =color(255 - red(c), 255 - green(c), 255 - blue(c));
+    switch (opcion) { 
+      case 1:   
+        imagen4.pixels[pixel] =color((red(c)+green(c)+blue(c))/3);
+        break;
+      case 2:   
+        imagen4.pixels[pixel] =color(0.2989*red(c)+ 0.5870*green(c)+ 0.1140*blue(c));
+        break;
+      case 3:
+        float[] values1 = { red(c),green(c),blue(c)};
+        imagen4.pixels[pixel] =color (max(values1));
+        break;
+      case 4:
+        float[] values2 = { red(c),green(c),blue(c)};
+        imagen4.pixels[pixel] =color ((max(values2) + min(values2))/2);
+        break;
+      case 5:
+        imagen4.pixels[pixel] =color(0.2989*red(c)+ 0.701*green(c)+ 0.087*blue(c));
+        break;
+      case 6:
+        imagen4.pixels[pixel] =color(0.2126*red(c)+ 0.7152*green(c)+ 0.0722*blue(c));
+        break;
+      case 7:
+        imagen4.pixels[pixel] =color(0.2627*red(c)+ 0.6780*green(c)+ 0.0593*blue(c));
+        break;
+      case 8:
+        imagen4.pixels[pixel] =color(255 - red(c), 255 - green(c), 255 - blue(c));
+        break;
     }
   }
   imagen4.updatePixels();
@@ -145,20 +208,47 @@ void brighnessThresholdVid(){
 
 
 void keyPressed() {
-  if (key == 'c'){
-    grayToScaleImg(1);
-    grayToScaleVid(1);
-  }
-  if (key == 'd'){
-    grayToScaleImg(2);
-    grayToScaleVid(2);
-  }
-  if (key == 'e'){
-    brighnessThresholdImg();
-    brighnessThresholdVid();
-  }
-  if (key == 'f'){
-    grayToScaleImg(3);
-    grayToScaleVid(3);
-  }
+
+  switch (key) { 
+      case '1':   
+        grayToScaleImg(1);
+        grayToScaleVid(1);
+        break;
+      case '2':   
+        grayToScaleImg(2);
+        grayToScaleVid(2);
+        break;
+      case '3':
+        grayToScaleImg(3);
+        grayToScaleVid(3);
+        
+        break;
+      case '4':
+        grayToScaleImg(4);
+        grayToScaleVid(4);
+        break;
+      case '5':
+        grayToScaleImg(5);
+        grayToScaleVid(5);
+        break;
+      case '6':
+        grayToScaleImg(6);
+        grayToScaleVid(6);
+        break;
+      case '7':
+        grayToScaleImg(7);
+        grayToScaleVid(7);
+        break;
+      case '8':
+        grayToScaleImg(8);
+        grayToScaleVid(8);
+        break;
+      case '9':
+        brighnessThresholdImg();
+        brighnessThresholdVid();
+        break;
+    }
+  
+
+  
 }
