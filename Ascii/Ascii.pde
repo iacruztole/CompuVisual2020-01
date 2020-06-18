@@ -8,7 +8,7 @@ int index = 0;
  
 // sampling resolution: colors will be sampled every n pixels 
 // to determine which character to display
-int resolution = 5;
+int resolution = 4;
  
 // array to hold characters for pixel replacement
 char[] ascii;
@@ -20,11 +20,6 @@ void setup() {
   images[1].resize(0, 700);
   mov = new Movie(this, "train.mp4");
   images[2] = mov;
-  
-  
-  //img = loadImage("hitagi.jpg");
-  
-  
   size(1000, 700);
   noStroke();
  
@@ -35,11 +30,9 @@ void setup() {
   for (int i = 0; i < 256; i++) {
     int index = int(map(i, 0, 256, 0, letters.length()));
     ascii[i] = letters.charAt(index);
-  }
- 
-  PFont mono = createFont("Courier", resolution+2);
-  textFont(mono);
- 
+  } 
+  PFont mono = createFont("Courier", resolution+3);
+  textFont(mono); 
   asciify(images[0]);
 }
  
@@ -62,10 +55,8 @@ void asciify(PImage img) {
   }
 }
 
-
 void movieEvent(Movie m) {
-  m.read();
-  
+  m.read(); 
 }
 
 void draw(){
@@ -83,14 +74,14 @@ void keyPressed() {
   else if (keyCode==RIGHT)
   {
     index = (index+1)%3;
-  }
-  
+  }  
   switch (index) {
     case 2:
       mov.loop();
       break;
     default:
       mov.stop();
+      images[index].filter(GRAY);
       asciify(images[index]);
-    }
+   }
 }
