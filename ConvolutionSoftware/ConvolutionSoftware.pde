@@ -74,6 +74,7 @@ int[][] kernelNorth = {{ 1,  1,  1},
 boolean hardware;
 void setup()
 { 
+  frameRate(1000);
   size(1200, 500);
   pg = createGraphics(1160, 460);
   String img = "hitagi.jpg";

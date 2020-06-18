@@ -39,6 +39,7 @@ final float[] kernelUnSharpMasking = { 1.0, 4.0, 6.0, 4.0, 1.0,
                                       1.0, 4.0, 6.0, 4.0, 1.0};
 
 void setup(){
+  frameRate(1000);
   size(1000, 500, P2D);
   mov = new Movie(this, "train.mp4");
   original = createShape(RECT, 0, 0, 500, 500);
